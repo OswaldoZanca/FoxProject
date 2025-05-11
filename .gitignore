@@ -4,7 +4,10 @@ venv/
 
 # === VARIABLES DE ENTORNO ===
 .env
-.env.*
+.env.dev
+.env.db
+!.env.dev.example
+!.env.db.example
 !.env.example
 
 # === CACHÉS Y COMPILADOS DE PYTHON ===
@@ -17,7 +20,7 @@ __pycache__/
 *.sqlite3
 *.log
 
-# === MIGRACIONES (solo si gestionas manualmente) ===
+# === MIGRACIONES (solo si las gestionas manualmente) ===
 **/migrations/*.py
 !**/migrations/__init__.py
 
@@ -38,7 +41,7 @@ postgres_data/
 *.pid
 *.sock
 
-# === TESTING / COVERAGE (si usas pytest + coverage) ===
+# === TESTING / COVERAGE ===
 htmlcov/
 .coverage
 .pytest_cache/
@@ -47,4 +50,3 @@ htmlcov/
 build/
 dist/
 *.egg-info/
-
