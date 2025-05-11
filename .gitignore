@@ -1,29 +1,50 @@
-# Entorno virtual
+# === ENTORNOS VIRTUALES ===
+.venv/
 venv/
+
+# === VARIABLES DE ENTORNO ===
 .env
-*.env
+.env.*
+!.env.example
+
+# === CACHÉS Y COMPILADOS DE PYTHON ===
 __pycache__/
 *.py[cod]
-*.sqlite3
-
-# Archivos de configuración o caché
-*.log
-*.pot
-*.pyc
 *.pyo
 *.pyd
+*.pyc
 *.db
+*.sqlite3
+*.log
 
-# Archivos de sistema
+# === MIGRACIONES (solo si gestionas manualmente) ===
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# === ARCHIVOS DE SISTEMA ===
 .DS_Store
 *.swp
+
+# === EDITORES ===
 .idea/
 .vscode/
 
-# Archivos generados por Django
+# === DJANGO ===
 staticfiles/
 media/
 
-# Migrations opcionales (solo si las gestionas manualmente)
-**/migrations/*.py
-!**/migrations/__init__.py
+# === DOCKER ===
+postgres_data/
+*.pid
+*.sock
+
+# === TESTING / COVERAGE (si usas pytest + coverage) ===
+htmlcov/
+.coverage
+.pytest_cache/
+
+# === OTROS ARCHIVOS DE CONSTRUCCIÓN ===
+build/
+dist/
+*.egg-info/
+
